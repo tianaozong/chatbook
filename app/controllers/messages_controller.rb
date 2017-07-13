@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
   def index
-    @messages = Message.all.where(getter: current_user.email)
+    @messages = Message.all.where(getter: current_user.email).reverse_order
   end
 
   # GET /messages/1
@@ -29,7 +29,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
+        format.html { redirect_to messages_path, notice: 'Message was successfully sent.' }
         format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new }

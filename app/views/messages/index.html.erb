@@ -6,7 +6,8 @@
 <div class="panel panel-default" style="max-width: 400px; margin: 30px auto">
   <div class="panel-heading"><%= message.title %> sent by <%= message.user.email %></div>
   <div class="panel-body">
-    <%= message.body %>
+    <%= message.body %><br>
+    Sent <%= message.created_at %>
   </div>
 </div>
 <% end %>
