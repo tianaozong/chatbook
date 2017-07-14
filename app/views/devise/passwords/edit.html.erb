@@ -12,14 +12,14 @@
     <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirm new password" %><br />
+  <div class="form-group">
+    <%= f.label :password_confirmation, "Confirm new password", class: "btn btn-success btn-m" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Change my password" %>
+  <div class="form-group">
+    <%= f.submit "Change my password" , class: "btn btn-success btn-m"%>
   </div>
-<% end %>
+<% end %
 
 <%= render "devise/shared/links" %>
